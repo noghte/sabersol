@@ -8,15 +8,19 @@
     "start": "next start"
   },
   "dependencies": {
+    "@headlessui/react": "^0.3.1",
     "@tryghost/content-api": "^1.5.1",
+    "autoprefixer": "^10.2.5",
     "connect-mongo": "^4.4.0",
     "dotenv": "^8.2.0",
     "express-session": "^1.17.1",
     "next": "^10.0.9",
     "next-connect": "^0.10.1",
+    "postcss": "^8.2.8",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "reactstrap": "^8.9.0"
+    "reactstrap": "^8.9.0",
+    "tailwindcss": "^2.0.4"
   },
   "devDependencies": {
     "yarn-upgrade-all": "^0.5.4"

@@ -2,29 +2,26 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+### Development
+1. Fill out `.env` to set MongoDB connectionstring, and other tokens (if needed)
+1. `yarn` to install packages
+1. `yarn dev` to start the project in the development mode
+1. Navigator to [http://localhost:3000](http://localhost:3000)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### Production
+Soon...
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-## Learn More
-
+## Thank you,
+- [David Grzyb](https://github.com/davidgrzyb) for [tailwind-blog-template](https://github.com/davidgrzyb/tailwind-blog-template)
+- [tailwind contributors](https://github.com/tailwindlabs/tailwindcss/graphs/contributors) for [tailwindcss](https://github.com/tailwindlabs/tailwindcss)
+- vercel team for [nextjs](https://github.com/vercel/next.js)
+- https://github.com/tailwindlabs/headlessui
+- https://github.com/tailwindtoolbox/Profile-Card
 To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

@@ -1,53 +1,111 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import React, { useState } from 'react';
+import {
+  TabContent, TabPane, Nav, NavItem, NavLink, Card, CardImg, Button, CardTitle, CardText, CardDeck,
+  CardSubtitle, CardBody, Row, Col, Container
+} from 'reactstrap';
+
+import classnames from 'classnames';
+import Blog from '../components/Blog';
 
 export default function Home() {
+  const [activeTab, setActiveTab] = useState('1');
+
+  const toggle = tab => {
+    if (activeTab !== tab) setActiveTab(tab);
+  }
+
+  const getStyle = colName => {
+    return {
+      borderRadius: 12,
+      //display:colName === 'sharing'? 'none':'block'
+    }
+
+  }
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Saber Soleymani</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+          Saber Soleymani
+         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+          CV, blog, likings, and {' '}
+          <code className={styles.code}>code</code>
         </p>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+        <Row>
+          <Col xs="6">
+          <Card style={getStyle('sharing')}>
+          <CardBody>
+          <img className={styles.icon} src="/img/blog.png" alt="Card image cap" />
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+                <CardTitle>Blog</CardTitle>
+                <CardSubtitle>Click on titles</CardSubtitle>
+                <CardText>This card has supporting text below as a natural lead-in to additional content.</CardText>
+              </CardBody>
+     </Card>
+          </Col>
+          <Col xs="3">
+          <Card style={getStyle('sharing')}>
+                <CardBody>
+                  <img className={styles.icon} src="/img/sharing.png" alt="Sharing" />
+                  <CardTitle>Sharing</CardTitle>
+                  <CardSubtitle>is caring</CardSubtitle>
+                  <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+                </CardBody>
+              </Card>
+          </Col>
+          <Col xs="3">
+          <Card>
+                <CardBody>
+                <img className={styles.icon} src="/img/sharing.png" alt="Sharing" />
+                  <CardTitle>Photos</CardTitle>
+                  <CardSubtitle>The photos</CardSubtitle>
+                  <CardText>
+                    carousel maybe?
+                  </CardText>
+                </CardBody>
+              </Card>
+              <Card>
+                <CardBody>
+                <img className={styles.icon} src="/img/sharing.png" alt="Tweets" />
+                  <CardTitle>Tweets</CardTitle>
+                  <CardSubtitle>twitter.com/sabersol</CardSubtitle>
+                  <CardText>
+                 tweets
+                  </CardText>
+                </CardBody>
+              </Card>
+              <Card>
+                <CardBody>
+                <img className={styles.icon} src="/img/code.png" alt="Tweets" />
+                  <CardTitle>Code</CardTitle>
+                  <CardSubtitle>github.com/noghte</CardSubtitle>
+                  <CardText>code links to github</CardText>
+                </CardBody>
+              </Card>
+              <Card>
+                <CardBody>
+                <img className={styles.icon} src="/img/cv.png" alt="CV" />
+                  <CardTitle>CV</CardTitle>
+                  <CardSubtitle>pdf</CardSubtitle>
+                  <CardText>
+                    cv contents
+                  </CardText>
+                </CardBody>
+              </Card>
+          </Col>
+        </Row>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
       </main>
 
       <footer className={styles.footer}>
@@ -57,9 +115,10 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+          <img src="/img/vercel.svg" alt="NextJS Logo" className={styles.logo} />
         </a>
       </footer>
     </div>
+
   )
 }
